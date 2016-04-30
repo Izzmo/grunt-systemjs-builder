@@ -7,3 +7,4 @@ tests/example/src/main/javascript/min/
 tests/example/node_modules/
 tests/babel/node_modules/
 **/dist/
+.vscode/
