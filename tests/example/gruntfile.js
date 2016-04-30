@@ -4,15 +4,12 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 
-		systemjs: {
+		systemjs_builder: {
 			demo: {
 				options: {
 					configFile: "src/main/javascript/config.js",
 					minify: false,
 					sfx: false
-					//build:{
-					//	encodeNames: false
-					//}
 				},
 				files: [{
 					src: "app/demo/app.js",

@@ -1,16 +1,16 @@
-[![npm version](https://badge.fury.io/js/grunt-systemjs-builder.svg)](https://www.npmjs.com/package/grunt-systemjs-builder)
+[![npm version](https://badge.fury.io/js/grunt-systemjsbuilder.svg)](https://www.npmjs.com/package/grunt-systemjsbuilder)
 
-# grunt-systemjs-builder
+# grunt-systemjsbuilder
 
 ## Getting started
 
 ### To Install
 
-_npm install --save-dev grunt-systemjs-builder_
+_npm install --save-dev grunt-systemjsbuilder_
 
 ### To register for grunt: 
 
-_grunt.loadNpmTasks("grunt-systemjs-builder");_
+_grunt.loadNpmTasks("grunt-systemjsbuilder");_
 
 ## To run with grunt use the following command:
 
@@ -20,7 +20,7 @@ _grunt systemjs_
 
 ## Options
 
-In essence, this grunt task simply passes along configuration to the [SystemJS Builder](https://github.com/systemjs/builder). You should familiarize yourself with its configuration [documentation](https://github.com/systemjs/builder/blob/master/README.md).
+This grunt task passes along configuration to the [SystemJS Builder](https://github.com/systemjs/builder). You should familiarize yourself with the configuration parameters [documentation](https://github.com/systemjs/builder/blob/master/README.md).
 
 ### baseURL: string
 
@@ -62,7 +62,7 @@ see [builder documentation](https://github.com/systemjs/builder/blob/master/READ
 
 ## Files
 
-Configuring the source and destination files is done in the standard grunt way using the "files" property of the target (see example below)
+Configuring the source and destination files are done in the standard grunt way using the "files" property of the target (see example below).
 
 ## Example
 
@@ -71,21 +71,21 @@ Configuring the source and destination files is done in the standard grunt way u
 
 grunt.initConfig({
 	systemjs: {
-	            options: {
-	                sfx: true,
-	                baseURL: "./target",
-	                configFile: "./target/config.js"
-                	minify: true,
-					build: {
-					  mangle: false
-					}
-	            },
-	            dist: {
-	                files: [{
-	                    "src":  "./target/src/init.js",
-	                    "dest": "./target/bundles/app.min.js"
-	                }]
-	            }
-	        }
+				options: {
+						sfx: true,
+						baseURL: "./target",
+						configFile: "./target/config.js"
+						minify: true,
+		build: {
+			mangle: false
+		}
+				},
+				dist: {
+						files: [{
+								"src":  "./target/src/init.js",
+								"dest": "./target/bundles/app.min.js"
+						}]
+				}
+		}
 });
 ```
