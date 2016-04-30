@@ -67,25 +67,24 @@ Configuring the source and destination files are done in the standard grunt way 
 ## Example
 
 
-``` javascript
-
+```javascript
 grunt.initConfig({
 	systemjs: {
-				options: {
-						sfx: true,
-						baseURL: "./target",
-						configFile: "./target/config.js"
-						minify: true,
-		build: {
-			mangle: false
+		options: {
+			sfx: true,
+			baseURL: './target',
+			configFile: './target/config.js'
+			minify: true,
+			build: {
+				mangle: false
+			}
+		},
+		dist: {
+			files: [{
+				src:  './target/src/init.js',
+				dest: './target/bundles/app.min.js'
+			}]
 		}
-				},
-				dist: {
-						files: [{
-								"src":  "./target/src/init.js",
-								"dest": "./target/bundles/app.min.js"
-						}]
-				}
-		}
+	}
 });
 ```
